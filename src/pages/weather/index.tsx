@@ -57,6 +57,7 @@ const WeatherApp = () => {
     return convert
   }, [])
 
+  const filter = 'will be filtered'
   const getApi = async () => {
     if (search?.value) {
       const { data: weatherData } = await axios.get<DataProps>(
@@ -78,7 +79,7 @@ const WeatherApp = () => {
     <S.Body>
       <S.Container>
         <S.Wrapper>
-          <h1>Como está o clima?</h1>
+          <h1>Como está o clima? {filter}</h1>
           {data && (
             <S.Popup>
               <S.PopupFirstSection>
