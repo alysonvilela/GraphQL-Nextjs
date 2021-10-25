@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
+import { tokens } from './token-values/tokenValues'
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
     * {
         margin: 0;
         padding: 0;
@@ -20,4 +21,8 @@ const GlobalStyle = createGlobalStyle`
     }
 `
 
-export default GlobalStyle
+GlobalStyle.defaultProps = {
+  theme: {
+    ...tokens
+  }
+}

@@ -1,26 +1,20 @@
-import React from 'react'
-import Link from 'next/link'
-
-type ButtonSizes = 'sm' | 'md' | 'lg'
-type ButtonTypes = 'normal' | 'outlined' | 'normalLink' | 'navLink'
+import React, { ReactNode } from 'react'
+import * as S from './button.style'
 
 type ChildrenProps = {
-  type: ButtonTypes
-  size: ButtonSizes
-  href: string
-  content: string
+  content: ReactNode
+  // props: LinkProps
 }
 
-const Button = (children: ChildrenProps) => {
+const Button = ({ content }: ChildrenProps) => {
   // AVAILABLE sizes: sm, md, lg
   // AVAILABLE types: normal, outlined, normalLink, navLink
+
   return (
     <>
-      <Link href={children.href}>
-        <a className={`${children.size} ${children.type}`}>
-          {children.content}
-        </a>
-      </Link>
+      {/* <Link passHref {...props}> */}
+      <S.aLink size="sm">{content}</S.aLink>
+      {/* </Link> */}
     </>
   )
 }

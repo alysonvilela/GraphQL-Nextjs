@@ -1,11 +1,11 @@
-import Button from 'components/Button'
 import React from 'react'
+import * as S from './about.style'
 
 const About = () => {
   return (
     <div>
       This is AboutPage
-      <Button href="/" type="normal" size="sm" content="Testando" />
+      <S.Buttons content="Testando" />
     </div>
   )
 }
