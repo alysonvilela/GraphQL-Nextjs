@@ -4,6 +4,9 @@ const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = withPWA({
   reactStrictMode: true,
+  env: {
+    appId: process.env.APPID
+  },
   pwa: {
     dest: 'public',
     disable: !isProd
