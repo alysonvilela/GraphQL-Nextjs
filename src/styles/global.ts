@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
-import { tokens } from './token-values/tokenValues'
+import { tokens } from './tokens/tokenValues'
 
 export const GlobalStyle = createGlobalStyle`
     * {

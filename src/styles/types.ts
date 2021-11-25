@@ -1,4 +1,4 @@
-import { Colors, Spacers, Fonts, Borders } from './token-values/tokenTypes'
+import { Colors, Spacers, Fonts, Borders } from './tokens/tokenTypes'
 
 export interface TokensProps {
   colors: Colors
